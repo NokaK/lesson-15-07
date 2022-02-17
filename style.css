@@ -1,5 +1,177 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/**
+ * /*
+ * Prefixed by https://autoprefixer.github.io
+ * PostCSS: v8.3.6,
+ * Autoprefixer: v10.3.1
+ * Browsers: last 4 version
+ *
+ * @format
+ */
+
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  width: 1000px;
+  background-color: blueviolet;
+  font-size: 10px;
+  /* transition-property: all;
+	transition-delay: 0.5s;
+	transition-duration: 0.5s;
+	transition-timing-function: linear; */
+  -webkit-transition: all 0.5s linear 0.5s;
+  -o-transition: all 0.5s linear 0.5s;
+  transition: all 0.5s linear 0.5s;
+}
+.container:hover {
+  width: 1200px;
+  background-color: chocolate;
+  font-size: 20px;
+}
+p {
+  -webkit-transition: all 0.3s linear 0.5s;
+  -o-transition: all 0.3s linear 0.5s;
+  transition: all 0.3s linear 0.5s;
+}
+.container:hover p {
+  color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation-name: anim;
+  animation-name: anim;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.box2 {
+  height: 100px;
+  position: absolute;
+  -webkit-animation-name: move;
+  animation-name: move;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    background-color: darkgreen;
+  }
+  50% {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+    background-color: red;
+  }
+  80% {
+    opacity: 0.1;
+    width: 150px;
+    border-radius: 100px;
+  }
+  100% {
+    top: 600px;
+    left: 300px;
+    background-color: blue;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    background-color: darkgreen;
+  }
+  50% {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+    background-color: red;
+  }
+  80% {
+    opacity: 0.1;
+    width: 150px;
+    border-radius: 100px;
+  }
+  100% {
+    top: 600px;
+    left: 300px;
+    background-color: blue;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    width: 100px;
+    bottom: 0;
+    right: 0;
+    background-color: aquamarine;
+    border-radius: 10px;
+  }
+  50% {
+    width: 200px;
+    bottom: 200px;
+    right: 200px;
+    background-color: yellow;
+    border-radius: 50px;
+  }
+  100% {
+    width: 100px;
+    bottom: 600px;
+    right: 300px;
+    background-color: black;
+    border-radius: 50%;
+  }
+}
+
+@keyframes move {
+  0% {
+    width: 100px;
+    bottom: 0;
+    right: 0;
+    background-color: aquamarine;
+    border-radius: 10px;
+  }
+  50% {
+    width: 200px;
+    bottom: 200px;
+    right: 200px;
+    background-color: yellow;
+    border-radius: 50px;
+  }
+  100% {
+    width: 100px;
+    bottom: 600px;
+    right: 300px;
+    background-color: black;
+    border-radius: 50%;
+  }
 }
